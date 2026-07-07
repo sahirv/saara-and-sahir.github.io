@@ -1,0 +1,28 @@
+{
+  "tables": [
+    {
+      "number": 1,
+      "constellation": "Orion",
+      "guests": [
+        { "name": "Saara Example" },
+        { "name": "Sahir Example" }
+      ]
+    },
+    {
+      "number": 2,
+      "constellation": "Cassiopeia",
+      "guests": [
+        { "name": "Jane Doe", "aliases": ["Janey"] },
+        { "name": "John Doe" }
+      ]
+    },
+    {
+      "number": 3,
+      "constellation": "Lyra",
+      "guests": [
+        { "name": "Ada Lovelace" },
+        { "name": "Alan Turing", "aliases": ["Al"] }
+      ]
+    }
+  ]
+}

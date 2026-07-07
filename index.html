@@ -3,9 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello World</title>
+    <title>Saara &amp; Sahir — Find your table</title>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    Hello World
+    <main class="card">
+      <header>
+        <p class="eyebrow">Saara &amp; Sahir</p>
+        <h1>Find your table</h1>
+        <p class="subtitle">
+          Type your name below and we&rsquo;ll point you to your seat.
+        </p>
+      </header>
+
+      <form id="lookup-form" autocomplete="off" novalidate>
+        <label for="name-input" class="visually-hidden">Your name</label>
+        <input
+          id="name-input"
+          name="name"
+          type="text"
+          placeholder="e.g. Jane Doe"
+          spellcheck="false"
+          autocapitalize="words"
+          required
+        />
+        <button type="submit">Find my table</button>
+      </form>
+
+      <section id="result" class="result" aria-live="polite"></section>
+
+      <footer>
+        <p>
+          Trouble finding your name?
+          <a href="./seating.html">View the full seating plan</a>.
+        </p>
+      </footer>
+    </main>
+
+    <script src="./app.js"></script>
   </body>
 </html>
