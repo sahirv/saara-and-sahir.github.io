@@ -6,6 +6,7 @@
    -------------------------------------------------------------- */
 
 :root {
+  /* Default (Reception) theme — deep navy + gold. */
   --bg:        #0b1a37;   /* deep navy */
   --bg-elev:   #12244a;   /* card / elevated surface */
   --border:    #1e3466;
@@ -13,8 +14,28 @@
   --ink-dim:   #c7b78a;
   --gold:      #d4af37;
   --gold-soft: #e6c964;
+  --surface:   #0d1e40;   /* inputs, result & table cards */
+  --on-accent: #0b1a37;   /* text sitting on the accent colour */
+  --link-hover:#fff2b8;
   --error-bg:  #3a1a1a;
   --error-ink: #ffb4b4;
+}
+
+/* Pithi theme — maroon + orange. Overrides the same custom properties so
+   every surface, accent and piece of text picks up the warmer palette. */
+body.theme-pithi {
+  --bg:        #3b0d0d;   /* deep maroon */
+  --bg-elev:   #57121a;   /* card / elevated surface */
+  --border:    #7a2a1e;
+  --ink:       #ffe4c4;   /* warm cream text */
+  --ink-dim:   #e0b48a;
+  --gold:      #e8792b;   /* orange accent */
+  --gold-soft: #f5a04d;
+  --surface:   #4a0f14;   /* inputs, result & table cards */
+  --on-accent: #3b0d0d;   /* text sitting on the accent colour */
+  --link-hover:#ffd9a8;
+  --error-bg:  #4a1414;
+  --error-ink: #ffc4c4;
 }
 
 * { box-sizing: border-box; }
@@ -93,7 +114,7 @@ h1 {
 }
 
 a { color: var(--gold-soft); text-decoration: underline; text-underline-offset: 3px; }
-a:hover { color: #fff2b8; }
+a:hover { color: var(--link-hover); }
 
 /* --------------------------------------------------------------
    Form
@@ -106,7 +127,7 @@ input[type="text"] {
   padding: 0.75rem 1rem;
   border: 1px solid var(--border);
   border-radius: 8px;
-  background: #0d1e40;
+  background: var(--surface);
   color: var(--ink);
   transition: border-color 0.15s ease;
 }
@@ -124,7 +145,7 @@ button {
   border: 1px solid var(--gold);
   border-radius: 8px;
   background: var(--gold);
-  color: #0b1a37;
+  color: var(--on-accent);
   cursor: pointer;
   letter-spacing: 0.04em;
   /* transform is composited; safe for hover/active feedback. */
@@ -149,7 +170,7 @@ button:disabled { opacity: 0.6; cursor: progress; }
   border-radius: 10px;
   text-align: left;
   border: 1px solid var(--border);
-  background: #0d1e40;
+  background: var(--surface);
   /* Composited fade-in for new results. */
   opacity: 0;
   transform: translate3d(0, 4px, 0);
@@ -223,7 +244,7 @@ footer {
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 1rem 1.25rem;
-  background: #0d1e40;
+  background: var(--surface);
   /* transform only — composited. */
   transition: transform 0.15s ease, border-color 0.15s ease;
 }
@@ -265,4 +286,105 @@ footer {
   padding: 0; margin: -1px;
   overflow: hidden; clip: rect(0,0,0,0);
   white-space: nowrap; border: 0;
+}
+
+[hidden] { display: none !important; }
+
+/* --------------------------------------------------------------
+   Event chooser splash — shown before the name lookup.
+   Ivory background regardless of the selected event theme; each
+   button previews its own event's colour scheme.
+   -------------------------------------------------------------- */
+
+.event-splash {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  background: #fbf6e9;          /* ivory */
+  color: #4a3b28;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  /* Composited entrance animation: opacity only. */
+  opacity: 0;
+  animation: splash-in 320ms ease-out forwards;
+  will-change: opacity;
+}
+
+@keyframes splash-in { to { opacity: 1; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .event-splash { animation: none; opacity: 1; }
+}
+
+.event-splash__inner {
+  width: 100%;
+  max-width: 30rem;
+  text-align: center;
+}
+
+.event-splash .eyebrow { color: #a8742a; }
+
+.event-splash__title {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0 0 0.5rem;
+  color: #3d2f1c;
+}
+
+.event-splash__subtitle {
+  margin: 0 0 2rem;
+  font-style: italic;
+  color: #6b5842;
+}
+
+.event-choices {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 30rem) {
+  .event-choices { flex-direction: row; }
+  .event-choices .event-choice { flex: 1; }
+}
+
+.event-choice {
+  font: inherit;
+  font-size: 1.25rem;
+  padding: 1.5rem 1rem;
+  border-radius: 12px;
+  border: 2px solid;
+  cursor: pointer;
+  letter-spacing: 0.08em;
+  transition: transform 0.12s ease;
+}
+
+.event-choice:active { transform: translate3d(0, 1px, 0); }
+.event-choice:hover  { transform: translate3d(0, -2px, 0); }
+
+.event-choice__name { display: block; }
+
+.event-choice__event {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+/* Pithi — maroon + orange preview. */
+.event-choice--pithi {
+  background: #3b0d0d;
+  border-color: #e8792b;
+  color: #ffe4c4;
+}
+
+/* Reception — navy + gold preview. */
+.event-choice--reception {
+  background: #0b1a37;
+  border-color: #d4af37;
+  color: #f4e6b8;
 }
