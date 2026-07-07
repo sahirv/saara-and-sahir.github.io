@@ -12,6 +12,10 @@
   var STORAGE_KEY = "sns-event";
   var EVENTS = { pithi: "theme-pithi", reception: "theme-reception" };
 
+  function isEvent(event) {
+    return Object.prototype.hasOwnProperty.call(EVENTS, event);
+  }
+
   function readStored() {
     try {
       return localStorage.getItem(STORAGE_KEY);
@@ -32,13 +36,13 @@
   function applyTheme(event) {
     var body = document.body;
     body.classList.remove("theme-pithi", "theme-reception");
-    body.classList.add(EVENTS[event] || EVENTS.reception);
+    body.classList.add(isEvent(event) ? EVENTS[event] : EVENTS.reception);
   }
 
   // Apply any previously chosen theme up front so pages other than the
   // chooser (e.g. the seating plan) render in the right colours.
   var stored = readStored();
-  applyTheme(EVENTS[stored] ? stored : "reception");
+  applyTheme(isEvent(stored) ? stored : "reception");
 
   // Wire up the chooser splash if it's present on this page.
   var splash = document.getElementById("event-splash");
@@ -50,7 +54,7 @@
     if (!btn) return;
 
     var event = btn.getAttribute("data-event");
-    if (!EVENTS[event]) event = "reception";
+    if (!isEvent(event)) event = "reception";
 
     writeStored(event);
     applyTheme(event);
