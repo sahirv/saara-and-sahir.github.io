@@ -7,7 +7,35 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <main class="card">
+    <section id="event-splash" class="event-splash">
+      <div class="event-splash__inner">
+        <p class="eyebrow">Saara &amp; Sahir</p>
+        <h1 class="event-splash__title">Which celebration are you joining?</h1>
+        <p class="event-splash__subtitle">
+          Choose your event to find your seat.
+        </p>
+        <div class="event-choices">
+          <button
+            type="button"
+            class="event-choice event-choice--pithi"
+            data-event="pithi"
+          >
+            <span class="event-choice__name">Pithi</span>
+            <span class="event-choice__event">Haldi celebration</span>
+          </button>
+          <button
+            type="button"
+            class="event-choice event-choice--reception"
+            data-event="reception"
+          >
+            <span class="event-choice__name">Reception</span>
+            <span class="event-choice__event">Evening celebration</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <main class="card" id="lookup" hidden>
       <header>
         <p class="eyebrow">Saara &amp; Sahir</p>
         <h1>Find your table</h1>
@@ -40,6 +68,7 @@
       </footer>
     </main>
 
+    <script src="./theme.js"></script>
     <script src="./app.js"></script>
   </body>
 </html>
