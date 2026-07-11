@@ -62,15 +62,27 @@
     var titleEl = document.getElementById("event-title");
     var subEl = document.getElementById("event-subtitle");
     if (!titleEl) return;
-    titleEl.textContent = EVENTS[name].label + " \u2014 find your table";
+
     if (subEl) {
+      // Lookup page.
+      titleEl.textContent = EVENTS[name].label + " \u2014 find your table";
       subEl.textContent =
         "Enter your name below to find your seat for the " +
         EVENTS[name].label + " on " + EVENTS[name].date + ".";
+    } else {
+      // Seating plan page (no subtitle slot).
+      titleEl.textContent = EVENTS[name].label + " seating plan";
     }
   }
 
   var chosen = eventFromQuery() || eventFromDate(new Date()) || "reception";
   applyTheme(chosen);
   updateHeader(chosen);
+
+  // Exposed so app.js / seating.js can fetch the right per-event data
+  // without duplicating the selection logic.
+  window.SNS = {
+    event: chosen,
+    guestsUrl: "./guests-" + chosen + ".json"
+  };
 })();

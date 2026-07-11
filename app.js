@@ -26,7 +26,7 @@
 
   function loadData() {
     if (!dataPromise) {
-      dataPromise = fetch("./guests.json", { cache: "no-cache" })
+      dataPromise = fetch(window.SNS.guestsUrl, { cache: "no-cache" })
         .then((r) => {
           if (!r.ok) throw new Error("HTTP " + r.status);
           return r.json();

@@ -4,7 +4,7 @@
   const planEl = document.getElementById("seating-plan");
   const statusEl = document.getElementById("seating-status");
 
-  fetch("./guests.json", { cache: "no-cache" })
+  fetch(window.SNS.guestsUrl, { cache: "no-cache" })
     .then((r) => {
       if (!r.ok) throw new Error("HTTP " + r.status);
       return r.json();

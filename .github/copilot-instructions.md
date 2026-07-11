@@ -11,51 +11,94 @@ types their name into a text box on the home page and the site tells them which
 table they are on. Each table has both a number and a constellation name
 (e.g. "Table 4 — Orion").
 
-**Data model**: attendee → table assignments live in a JSON file committed to
-the repo (planned; not yet present). The lookup runs entirely client-side —
-the JSON is fetched by the browser, so **anything in that file is publicly
-visible**. Do not put anything sensitive (addresses, phone numbers, dietary
-notes, plus-one drama, etc.) in it; keep it to the minimum needed for lookup
-(guest name(s) and table identifier).
+The site covers **two events** that share the same UI:
 
-As of this writing the site is a placeholder: a single `index.html` at the repo
-root that renders "Hello World". There is no framework, no bundler, no package
-manager, no tests, and no CI configuration. Treat any new file added at the
-repo root as immediately publicly served.
+| Event     | Date (2026) | Theme         |
+| --------- | ----------- | ------------- |
+| Pithi     | July 24     | maroon + orange |
+| Reception | July 25     | navy + gold (default) |
+
+The active event is selected automatically by `theme.js` from the guest's
+local date. Outside those two days the Reception theme is used as the default.
+A `?event=pithi` or `?event=reception` query parameter overrides the
+date-based choice (previewing, sharing an explicit link). There is no
+event chooser UI — some guests are only invited to one event, so we don't
+present a choice they may not have.
+
+## Layout
+
+Everything lives at the repo root (Pages serves it as-is):
+
+- `index.html` — name lookup form.
+- `seating.html` — full seating plan for the active event.
+- `theme.js` — picks the event, applies the theme class to `<body>`, sets the
+  header text, and exposes `window.SNS = { event, guestsUrl }` for the other
+  scripts. Loaded first on every page.
+- `app.js` — lookup form behaviour on `index.html`.
+- `seating.js` — renders the seating plan on `seating.html`.
+- `styles.css` — single stylesheet driven by CSS custom properties; the
+  `.theme-pithi` body class swaps the palette. **No** `backdrop-filter`,
+  `filter`, or `background-attachment: fixed`, and animations use only
+  `opacity` + `transform` so they run on the compositor thread.
+- `guests-pithi.json`, `guests-reception.json` — per-event guest data
+  (see schema below).
+
+## Data model
+
+Each event has its own JSON file (`guests-<event>.json`) so the two guest
+lists can differ. Schema:
+
+```json
+{
+  "tables": [
+    {
+      "number": 1,
+      "constellation": "Orion",
+      "guests": [
+        { "name": "Full Name", "aliases": ["Nickname", "Maiden Name"] }
+      ]
+    }
+  ]
+}
+```
+
+- `aliases` is optional and used only for name matching (not displayed).
+- The JSON is fetched client-side, so **anything in it is publicly visible**.
+  Keep it to names + table info only — no addresses, phone numbers, dietary
+  notes, plus-one drama, etc.
+- Table numbers and constellation names do **not** need to line up between
+  the two events; they're independent seating plans.
+
+Scripts always fetch via `window.SNS.guestsUrl` (set by `theme.js`) rather
+than hardcoding a filename, so adding future events only requires updating
+`theme.js`.
 
 ## Working in this repo
 
-- **Preview locally**: open `index.html` directly in a browser, or run a static
-  server from the repo root (e.g. `python -m http.server 8000`) and visit
-  `http://localhost:8000/`. There is no dev server script.
-- **Deploy**: pushing to the default branch publishes the site via GitHub Pages.
-  There is no build step — files are served as-is from the repo root.
-- **No test / lint / build tooling** is configured. Do not invent `npm`, `make`,
-  or similar commands; if you add tooling, wire it up explicitly and document
-  it here.
+- **Preview locally**: `python -m http.server 8000` from the repo root, then
+  open `http://localhost:8000/`. Use `?event=pithi` or `?event=reception`
+  to preview a specific theme.
+- **Deploy**: pushing to `main` publishes via GitHub Pages. There is no
+  build step.
+- **No test / lint / build tooling** is configured. Don't invent `npm`,
+  `make`, or similar commands; if you add tooling, wire it up explicitly
+  and document it here.
 
 ## Conventions
 
-- Keep asset paths **relative** (e.g. `./styles.css`, not `/styles.css`) so the
-  site works both from the Pages URL and when opened as a local file.
-- The `<title>` currently says "Hello World"; update it when the real content
-  lands.
+- Keep asset paths **relative** (e.g. `./styles.css`, not `/styles.css`) so
+  the site works both from the Pages URL and when opened as a local file.
+- Load `theme.js` **before** `app.js` / `seating.js` on any page that reads
+  `window.SNS`.
 - **Name matching should be forgiving.** Guests will mistype, use nicknames,
-  or enter only a first or last name. Prefer case-insensitive, whitespace- and
-  diacritic-normalized matching, and consider supporting nickname/alias lists
-  in the JSON so a single seat can be found by multiple inputs.
-- **Fail gracefully on no match.** Show a friendly "we couldn't find that name
-  — please check with us" message rather than a blank result or an error.
+  or enter only a first or last name. Matching is case-insensitive,
+  diacritic-stripped, and supports prefix + alias matches; preserve that
+  behaviour when editing `app.js`.
+- **Fail gracefully on no match.** Point guests at the full seating plan
+  rather than showing a blank result or a raw error.
 - **Table identity has two parts** (number + constellation name); show both
-  wherever a table is displayed so guests can find it by either.
-
-## When scaling this up
-
-If/when this grows beyond a single page, prefer either:
-1. Staying static (plain HTML/CSS/JS, optionally with a small static-site
-   generator whose output is committed or built in a GitHub Action), or
-2. Moving the source into a subdirectory and using a GitHub Actions workflow
-   to publish the built output to Pages.
-
-Either way, update this file so future sessions know the new layout and
-commands.
+  wherever a table is displayed.
+- **Animations stay on the compositor**: only animate `opacity` and
+  `transform`. Avoid `filter`, `backdrop-filter`, animated
+  `background-position`, and `background-attachment: fixed` — earlier
+  versions of the site used these and were unusably slow.
