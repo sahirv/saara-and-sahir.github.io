@@ -202,10 +202,11 @@
   }
 
   function renderNotFound() {
+    var seatingHref = "./seating.html?event=" + (window.SNS && window.SNS.event ? window.SNS.event : "reception");
     resultEl.innerHTML =
       '<div class="not-found">' +
       "We couldn&rsquo;t find that name. Try just your first or last name, " +
-      'or <a href="./seating.html">view the full seating plan</a>.' +
+      'or <a href="' + seatingHref + '">view the full seating plan</a>.' +
       "</div>";
   }
 

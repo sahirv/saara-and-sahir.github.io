@@ -78,6 +78,27 @@
   var chosen = eventFromQuery() || eventFromDate(new Date()) || "reception";
   applyTheme(chosen);
   updateHeader(chosen);
+  propagateEventOnLinks(chosen);
+
+  // Rewrite in-site navigation so the chosen event follows the guest across
+  // pages. Without this a `?event=pithi` preview would lose its context when
+  // clicking through to the seating plan, and a guest viewing the wrong-day
+  // event via a shared link would land on the date-defaulted theme instead.
+  function propagateEventOnLinks(name) {
+    var anchors = document.querySelectorAll('a[href$="index.html"], a[href$="seating.html"]');
+    for (var i = 0; i < anchors.length; i++) {
+      var a = anchors[i];
+      try {
+        var url = new URL(a.getAttribute("href"), window.location.href);
+        url.searchParams.set("event", name);
+        // Preserve the original relative form (e.g. "./seating.html?event=pithi")
+        // rather than emitting an absolute URL.
+        a.setAttribute("href", url.pathname.split("/").pop() + url.search);
+      } catch (e) {
+        /* leave the link alone if URL parsing fails */
+      }
+    }
+  }
 
   // Exposed so app.js / seating.js can fetch the right per-event data
   // without duplicating the selection logic.
