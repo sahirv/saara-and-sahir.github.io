@@ -4,22 +4,64 @@
       "number": 1,
       "constellation": "Orion",
       "guests": [
-        { "name": "Saara Example" },
-        { "name": "Sahir Example" }
+        { "name": "Saara Patel" },
+        { "name": "Sahir Mehta" },
+        { "name": "Priya Patel" },
+        { "name": "Rajesh Patel" },
+        { "name": "Anita Mehta" },
+        { "name": "Vikram Mehta" }
       ]
     },
     {
       "number": 2,
       "constellation": "Cassiopeia",
       "guests": [
-        { "name": "Jane Doe", "aliases": ["Janey"] }
+        { "name": "Neha Patel", "aliases": ["Nen"] },
+        { "name": "Arjun Patel" },
+        { "name": "Meera Shah", "aliases": ["Meera Patel"] },
+        { "name": "Kiran Shah" },
+        { "name": "Uma Patel" }
       ]
     },
     {
       "number": 3,
       "constellation": "Lyra",
       "guests": [
-        { "name": "Ada Lovelace" }
+        { "name": "Rohan Mehta" },
+        { "name": "Divya Mehta" },
+        { "name": "Aarav Mehta" },
+        { "name": "Nisha Kapoor", "aliases": ["Nish"] },
+        { "name": "Amit Kapoor" }
+      ]
+    },
+    {
+      "number": 4,
+      "constellation": "Andromeda",
+      "guests": [
+        { "name": "Jane Doe", "aliases": ["Janey"] },
+        { "name": "John Doe" },
+        { "name": "Ada Lovelace" },
+        { "name": "Alan Turing", "aliases": ["Al"] }
+      ]
+    },
+    {
+      "number": 5,
+      "constellation": "Ursa Major",
+      "guests": [
+        { "name": "Fatima Khan" },
+        { "name": "Zain Khan" },
+        { "name": "Leila Nasser" },
+        { "name": "Omar Haddad" }
+      ]
+    },
+    {
+      "number": 6,
+      "constellation": "Draco",
+      "guests": [
+        { "name": "Riya Sharma", "aliases": ["Ri"] },
+        { "name": "Karan Malhotra" },
+        { "name": "Ayesha Iqbal" },
+        { "name": "Devon Brooks" }
       ]
     }
   ]
