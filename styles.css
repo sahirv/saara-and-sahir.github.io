@@ -174,7 +174,8 @@ button:disabled { opacity: 0.6; cursor: progress; }
 
 .result .found,
 .result .not-found,
-.result .ambiguous {
+.result .ambiguous,
+.result .secret {
   padding: 1.25rem;
   border-radius: 10px;
   text-align: left;
@@ -193,12 +194,24 @@ button:disabled { opacity: 0.6; cursor: progress; }
   border-color: #5a2323;
 }
 
+.result .secret {
+  border-color: var(--gold);
+  color: var(--ink);
+}
+
+.result .secret p {
+  margin: 0;
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--gold-soft);
+}
+
 @keyframes result-in {
   to { opacity: 1; transform: translate3d(0, 0, 0); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .result .found, .result .not-found, .result .ambiguous {
+  .result .found, .result .not-found, .result .ambiguous, .result .secret {
     animation: none; opacity: 1; transform: none;
   }
 }

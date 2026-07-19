@@ -24,6 +24,23 @@
     return n ? n.split(" ") : [];
   }
 
+  // Hidden easter egg: typing an event's magic phrase into the lookup box
+  // reveals a secret message (a little scavenger-hunt game for guests).
+  // Phrases are normalized so matching is as forgiving as name lookup.
+  const SECRETS = {
+    pithi: {
+      phrase: normalize("Hoodoo"),
+      message:
+        "You found a hidden trail! Tell the bride and groom your magic " +
+        "password to get your prize.",
+    },
+    reception: {
+      phrase: normalize("no time for caution"),
+      message:
+        "Indeed! Proceed to the bride and groom stat to find out your prize.",
+    },
+  };
+
   function loadData() {
     if (!dataPromise) {
       dataPromise = fetch(window.SNS.guestsUrl, { cache: "no-cache" })
@@ -240,6 +257,17 @@
     resultEl.appendChild(box);
   }
 
+  function renderSecret(message) {
+    clearHikeBackground();
+    resultEl.innerHTML = "";
+    const box = document.createElement("div");
+    box.className = "secret";
+    const p = document.createElement("p");
+    p.textContent = message;
+    box.appendChild(p);
+    resultEl.appendChild(box);
+  }
+
   function renderNotFound() {
     clearHikeBackground();
     var seatingHref = "./seating.html?event=" + (window.SNS && window.SNS.event ? window.SNS.event : "pithi");
@@ -263,6 +291,13 @@
     const query = input.value;
     if (!normalize(query)) {
       input.focus();
+      return;
+    }
+
+    // Easter egg: the active event's magic phrase reveals its secret.
+    const secret = SECRETS[window.SNS && window.SNS.event];
+    if (secret && normalize(query) === secret.phrase) {
+      renderSecret(secret.message);
       return;
     }
 
