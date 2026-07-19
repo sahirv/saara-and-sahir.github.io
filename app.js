@@ -242,7 +242,7 @@
 
   function renderNotFound() {
     clearHikeBackground();
-    var seatingHref = "./seating.html?event=" + (window.SNS && window.SNS.event ? window.SNS.event : "reception");
+    var seatingHref = "./seating.html?event=" + (window.SNS && window.SNS.event ? window.SNS.event : "pithi");
     resultEl.innerHTML =
       '<div class="not-found">' +
       "We couldn&rsquo;t find that name. Try just your first or last name, " +

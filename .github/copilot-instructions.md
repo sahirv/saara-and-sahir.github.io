@@ -15,11 +15,11 @@ The site covers **two events** that share the same UI:
 
 | Event     | Date (2026) | Theme         |
 | --------- | ----------- | ------------- |
-| Pithi     | July 24     | maroon + orange |
-| Reception | July 25     | navy + gold (default) |
+| Pithi     | July 24     | maroon + orange (default) |
+| Reception | July 25     | navy + gold |
 
 The active event is selected automatically by `theme.js` from the guest's
-local date. Outside those two days the Reception theme is used as the default.
+local date. Outside those two days the Pithi theme is used as the default.
 A `?event=pithi` or `?event=reception` query parameter overrides the
 date-based choice (previewing, sharing an explicit link). There is no
 event chooser UI — some guests are only invited to one event, so we don't

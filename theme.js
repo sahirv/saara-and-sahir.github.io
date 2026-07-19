@@ -2,13 +2,13 @@
    Event theming.
 
    The site serves two events that share the same lookup UI:
-     - Pithi     — July 24, 2026 (maroon + orange)
-     - Reception — July 25, 2026 (navy + gold, default)
+     - Pithi     — July 24, 2026 (maroon + orange, default)
+     - Reception — July 25, 2026 (navy + gold)
 
    The event is chosen automatically from the guest's local date so
    guests aren't asked which event they're attending (some are only
    invited to one). Outside those two days we fall back to the default
-   Reception theme.
+   Pithi theme.
 
    A `?event=pithi` or `?event=reception` query parameter overrides the
    date-based choice — useful for previewing and for sharing an explicit
@@ -75,7 +75,7 @@
     }
   }
 
-  var chosen = eventFromQuery() || eventFromDate(new Date()) || "reception";
+  var chosen = eventFromQuery() || eventFromDate(new Date()) || "pithi";
   applyTheme(chosen);
   updateHeader(chosen);
   propagateEventOnLinks(chosen);
