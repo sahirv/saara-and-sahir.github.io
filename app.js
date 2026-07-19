@@ -45,7 +45,7 @@
       const allGuestNames = (table.guests || []).map((g) => g.name);
       const tableRef = {
         number: table.number,
-        constellation: table.constellation,
+        tableName: table.tableName,
         guestNames: allGuestNames,
       };
       for (const guest of table.guests || []) {
@@ -143,11 +143,16 @@
     box.innerHTML =
       '<p class="guest-name"></p>' +
       '<p class="table-line">' +
-      'You&rsquo;re at <span class="table-number"></span> &mdash; ' +
-      '<span class="constellation"></span></p>';
+      'You&rsquo;re at <span class="table-number"></span>' +
+      '<span class="table-name-sep"> &mdash; </span>' +
+      '<span class="table-name"></span></p>';
     box.querySelector(".guest-name").textContent = entry.display;
     box.querySelector(".table-number").textContent = "Table " + table.number;
-    box.querySelector(".constellation").textContent = table.constellation;
+    const name = table.tableName || "";
+    box.querySelector(".table-name").textContent = name;
+    if (!name) {
+      box.querySelector(".table-name-sep").style.display = "none";
+    }
 
     const tablemates = (table.guestNames || []).filter(
       (n) => n !== entry.display
@@ -190,8 +195,9 @@
         m.entry.display +
         "  (Table " +
         m.entry.table.number +
-        " — " +
-        m.entry.table.constellation +
+        (m.entry.table.tableName
+          ? " — " + m.entry.table.tableName
+          : "") +
         ")";
       btn.addEventListener("click", () => renderFound(m.entry));
       li.appendChild(btn);

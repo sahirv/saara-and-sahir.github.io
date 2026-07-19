@@ -204,7 +204,7 @@ button:disabled { opacity: 0.6; cursor: progress; }
 
 .result .table-line { font-size: 1.35rem; margin: 0; color: var(--ink); }
 .result .table-number { font-weight: 700; color: var(--gold-soft); }
-.result .constellation { font-style: italic; color: var(--gold); }
+.result .table-name { font-style: italic; color: var(--gold); }
 
 .result ul { margin: 0.5rem 0 0; padding-left: 1.25rem; }
 
@@ -264,7 +264,7 @@ footer {
 }
 
 .table-card__heading .table-number { color: var(--ink); }
-.table-card__heading .constellation { color: var(--gold); font-style: italic; }
+.table-card__heading .table-name { color: var(--gold); font-style: italic; }
 
 .guest-list { list-style: none; padding: 0; margin: 0; }
 

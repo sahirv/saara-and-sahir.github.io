@@ -33,11 +33,11 @@
 
   function render(data) {
     const tables = (data.tables || []).slice().sort((a, b) => {
-      // Sort by table number when numeric, otherwise by constellation name.
+      // Sort by table number when numeric, otherwise by table name.
       const an = typeof a.number === "number" ? a.number : Infinity;
       const bn = typeof b.number === "number" ? b.number : Infinity;
       if (an !== bn) return an - bn;
-      return String(a.constellation).localeCompare(String(b.constellation));
+      return String(a.tableName).localeCompare(String(b.tableName));
     });
 
     planEl.innerHTML = "";
@@ -57,13 +57,15 @@
       const num = document.createElement("span");
       num.className = "table-number";
       num.textContent = "Table " + table.number;
-      const sep = document.createTextNode(" — ");
-      const con = document.createElement("span");
-      con.className = "constellation";
-      con.textContent = table.constellation;
       h.appendChild(num);
-      h.appendChild(sep);
-      h.appendChild(con);
+      const name = table.tableName || "";
+      if (name) {
+        h.appendChild(document.createTextNode(" — "));
+        const con = document.createElement("span");
+        con.className = "table-name";
+        con.textContent = name;
+        h.appendChild(con);
+      }
       card.appendChild(h);
 
       const guests = (table.guests || [])

@@ -8,7 +8,7 @@ root of the `main` branch is served directly, with no build step).
 
 **Purpose**: a static seating-lookup site for Saara & Sahir's wedding. A guest
 types their name into a text box on the home page and the site tells them which
-table they are on. Each table has both a number and a constellation name
+table they are on. Each table has both a number and a themed name
 (e.g. "Table 4 — Orion").
 
 The site covers **two events** that share the same UI:
@@ -53,7 +53,7 @@ lists can differ. Schema:
   "tables": [
     {
       "number": 1,
-      "constellation": "Orion",
+      "tableName": "Orion",
       "guests": [
         { "name": "Full Name", "aliases": ["Nickname", "Maiden Name"] }
       ]
@@ -62,11 +62,13 @@ lists can differ. Schema:
 }
 ```
 
+- `tableName` is the table's themed display name (e.g. a constellation for the
+  Reception or a hike name for the Pithi); it may be an empty string.
 - `aliases` is optional and used only for name matching (not displayed).
 - The JSON is fetched client-side, so **anything in it is publicly visible**.
   Keep it to names + table info only — no addresses, phone numbers, dietary
   notes, plus-one drama, etc.
-- Table numbers and constellation names do **not** need to line up between
+- Table numbers and table names do **not** need to line up between
   the two events; they're independent seating plans.
 
 Scripts always fetch via `window.SNS.guestsUrl` (set by `theme.js`) rather
@@ -96,7 +98,7 @@ than hardcoding a filename, so adding future events only requires updating
   behaviour when editing `app.js`.
 - **Fail gracefully on no match.** Point guests at the full seating plan
   rather than showing a blank result or a raw error.
-- **Table identity has two parts** (number + constellation name); show both
+- **Table identity has two parts** (number + table name); show both
   wherever a table is displayed.
 - **Animations stay on the compositor**: only animate `opacity` and
   `transform`. Avoid `filter`, `backdrop-filter`, animated

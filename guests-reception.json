@@ -2,127 +2,364 @@
   "tables": [
     {
       "number": 1,
-      "constellation": "Orion",
+      "tableName": "Aries",
       "guests": [
-        { "name": "Saara Patel" },
-        { "name": "Sahir Mehta" },
-        { "name": "Priya Patel" },
-        { "name": "Rajesh Patel" },
-        { "name": "Anita Mehta" },
-        { "name": "Vikram Mehta" },
-        { "name": "Neha Patel", "aliases": ["Nen"] },
-        { "name": "Rohan Mehta" }
+        { "name": "Massey Adel" },
+        { "name": "Massey's Guest" },
+        { "name": "Nakash Babwany" },
+        { "name": "Zahra Khalil" },
+        { "name": "Yash Masani" },
+        { "name": "Lamia Firasta" }
       ]
     },
     {
       "number": 2,
-      "constellation": "Cassiopeia",
+      "tableName": "Virgo",
       "guests": [
-        { "name": "Arjun Patel" },
-        { "name": "Meera Shah", "aliases": ["Meera Patel"] },
-        { "name": "Kiran Shah" },
-        { "name": "Uma Patel" },
-        { "name": "Deepak Patel" },
-        { "name": "Sanjay Patel" },
-        { "name": "Rekha Patel" }
+        { "name": "Nilusha" },
+        { "name": "Gigi" },
+        { "name": "Tanvin" },
+        { "name": "Sameen Jiwani" },
+        { "name": "Saniya Hamirani" },
+        { "name": "Camila Simons" },
+        { "name": "Lily Amer" }
       ]
     },
     {
       "number": 3,
-      "constellation": "Lyra",
+      "tableName": "Orion",
       "guests": [
-        { "name": "Divya Mehta" },
-        { "name": "Aarav Mehta" },
-        { "name": "Nisha Kapoor", "aliases": ["Nish"] },
-        { "name": "Amit Kapoor" },
-        { "name": "Ravi Mehta" },
-        { "name": "Sunita Mehta" },
-        { "name": "Kavya Mehta" }
+        { "name": "Kareem Hirani" },
+        { "name": "Faizaan Vidhani" },
+        { "name": "Asim Maredia" },
+        { "name": "Muneef Momin" },
+        { "name": "Anusha Sunasara" },
+        { "name": "Celina Fu" },
+        { "name": "Celina Fu's Guest" },
+        { "name": "Raval Alviarez" }
       ]
     },
     {
       "number": 4,
-      "constellation": "Andromeda",
+      "tableName": "Cassiopeia",
       "guests": [
-        { "name": "Jane Doe", "aliases": ["Janey"] },
-        { "name": "John Doe" },
-        { "name": "Ada Lovelace" },
-        { "name": "Alan Turing", "aliases": ["Al"] },
-        { "name": "Marie Curie" },
-        { "name": "Pierre Curie" }
+        { "name": "Jamil Rehemtulla" },
+        { "name": "Sarah Rehemtulla" },
+        { "name": "Rahim Panjwani" },
+        { "name": "Khadij Assani" },
+        { "name": "Zoheb Lokhandwala" },
+        { "name": "Sumbal Lalani" },
+        { "name": "Nazif Ali" },
+        { "name": "Aman Sunesara" }
       ]
     },
     {
       "number": 5,
-      "constellation": "Ursa Major",
+      "tableName": "Leo",
       "guests": [
-        { "name": "Fatima Khan" },
-        { "name": "Zain Khan" },
-        { "name": "Leila Nasser" },
-        { "name": "Omar Haddad" },
-        { "name": "Tariq Ansari" },
-        { "name": "Yusra Ali" }
+        { "name": "Hannah Kuracina" },
+        { "name": "Ryan Schleehahn" },
+        { "name": "Deanna Barefoot" },
+        { "name": "Curtis Barefoot" },
+        { "name": "Nirma Jbara" },
+        { "name": "Nirma's Guest" },
+        { "name": "Narmin Dhagistani" }
       ]
     },
     {
       "number": 6,
-      "constellation": "Draco",
+      "tableName": "Taurus",
       "guests": [
-        { "name": "Riya Sharma", "aliases": ["Ri"] },
-        { "name": "Karan Malhotra" },
-        { "name": "Ayesha Iqbal" },
-        { "name": "Devon Brooks" },
-        { "name": "Priyanka Reddy" },
-        { "name": "Marcus Chen" }
+        { "name": "Aabida Madhani" },
+        { "name": "Saad Madhani" },
+        { "name": "Samara Madhani" },
+        { "name": "Nadia Dharsee" },
+        { "name": "Zahir Dharsee" },
+        { "name": "Shaz Mawji" },
+        { "name": "Nick Mawji" },
+        { "name": "Peter Pusitz" },
+        { "name": "Penny Pusitz" },
+        { "name": "Jacqueline Tyrrell" }
       ]
     },
     {
       "number": 7,
-      "constellation": "Pegasus",
+      "tableName": "Cygnus",
       "guests": [
-        { "name": "Elena Rodriguez", "aliases": ["Ellie"] },
-        { "name": "Michael O'Brien", "aliases": ["Mike"] },
-        { "name": "Grace Kim" },
-        { "name": "Daniel Park" },
-        { "name": "Sophie Laurent" },
-        { "name": "Thomas Nguyen" }
+        { "name": "Mohsin Madad Ali" },
+        { "name": "Eli Tejani" },
+        { "name": "Kiran Alwani" },
+        { "name": "Malik Madad Ali" },
+        { "name": "Parvin Amyn" },
+        { "name": "Mandy Malik" },
+        { "name": "Amyn Khowaja" },
+        { "name": "Arisha Khowaja" },
+        { "name": "Mehreen Tejani" },
+        { "name": "Ariya tejani" }
       ]
     },
     {
       "number": 8,
-      "constellation": "Cygnus",
+      "tableName": "Aquarius",
       "guests": [
-        { "name": "Emma Wilson", "aliases": ["Em"] },
-        { "name": "Liam Foster" },
-        { "name": "Isabella Rossi", "aliases": ["Bella"] },
-        { "name": "Noah Bennett" },
-        { "name": "Olivia Chen", "aliases": ["Liv"] },
-        { "name": "Henry Walsh" }
+        { "name": "Ahmed Ali Kamruddin" },
+        { "name": "Ayra Rajwani" },
+        { "name": "Ashraf Kamruddin" },
+        { "name": "Kassam Ali Rajwani" },
+        { "name": "Daulat Rajwani" },
+        { "name": "Yasmin Alwani" },
+        { "name": "Roshan Alwani" },
+        { "name": "Umma Aunty" },
+        { "name": "Mehboob Rajwani" },
+        { "name": "Saima Rajwani" }
       ]
     },
     {
       "number": 9,
-      "constellation": "Perseus",
+      "tableName": "Gemini",
       "guests": [
-        { "name": "Hassan Malik" },
-        { "name": "Zara Malik" },
-        { "name": "Farah Sheikh" },
-        { "name": "Imran Sheikh" },
-        { "name": "Nadia Rahman" },
-        { "name": "Bilal Rahman" }
+        { "name": "Asif Ali" },
+        { "name": "Shirin Vellani" },
+        { "name": "Razia Ali" },
+        { "name": "Rahin Ali" },
+        { "name": "Anjiya Ali" },
+        { "name": "Mishal Vellani" },
+        { "name": "Sara Lakhani" },
+        { "name": "DADA Vellani" },
+        { "name": "Amir Vellani" },
+        { "name": "Iman Vellani" }
       ]
     },
     {
       "number": 10,
-      "constellation": "Corona Borealis",
+      "tableName": "Pisces",
       "guests": [
-        { "name": "Chloe Martin" },
-        { "name": "Ethan Wright" },
-        { "name": "Ava Thompson" },
-        { "name": "James Carter" },
-        { "name": "Mia Anderson" },
-        { "name": "Lucas Reyes" }
+        { "name": "Hamza Bana" },
+        { "name": "Nupur bana" },
+        { "name": "Zehra Bana" },
+        { "name": "Hassan Bana" },
+        { "name": "Javeria Bana" },
+        { "name": "Diya bana" },
+        { "name": "Shaista Morani" },
+        { "name": "Ali Morani" },
+        { "name": "Rehan Morani" },
+        { "name": "Ramal Morani" }
+      ]
+    },
+    {
+      "number": 11,
+      "tableName": "Bootes",
+      "guests": [
+        { "name": "Hameeda Somani" },
+        { "name": "Malik Murad" },
+        { "name": "Nazim Somani" },
+        { "name": "Neha Somani" },
+        { "name": "Hadiya Somani" },
+        { "name": "Zehra Sadruddin" },
+        { "name": "Amina Malik" },
+        { "name": "Salim Sadruddin" },
+        { "name": "Anjiya Malik" },
+        { "name": "Aarish malik" }
+      ]
+    },
+    {
+      "number": 12,
+      "tableName": "Libra",
+      "guests": [
+        { "name": "Nameera Manji" },
+        { "name": "Sahar Mithani" },
+        { "name": "Firdous Joosub" },
+        { "name": "Sara Joosub" },
+        { "name": "Nazleen Manji" },
+        { "name": "Ahmed Manji" },
+        { "name": "Afshin Manji" },
+        { "name": "Rozina Joosub" },
+        { "name": "Shaliza Mithani" },
+        { "name": "Sohail Mithani" }
+      ]
+    },
+    {
+      "number": 13,
+      "tableName": "Lyra",
+      "guests": [
+        { "name": "Aziz Ali" },
+        { "name": "Naureen Ali" },
+        { "name": "Aziz' SON Ali" },
+        { "name": "Abdul Karim Janmohammad" },
+        { "name": "Ashrafunissa Janmohammad" },
+        { "name": "Salimah Basaria" },
+        { "name": "Zynah Basaria" },
+        { "name": "Raheesh Basaria" },
+        { "name": "sohail Basaria" }
+      ]
+    },
+    {
+      "number": 14,
+      "tableName": "Pegasus",
+      "guests": [
+        { "name": "Glen Chow" },
+        { "name": "Maria Chow" },
+        { "name": "Kathy McGilton" },
+        { "name": "Jennifer Bethell" },
+        { "name": "Shannon Holden" },
+        { "name": "Holly-Ann Campbell" },
+        { "name": "Braden Campbell" },
+        { "name": "Leanne Tran" },
+        { "name": "Klaus Fiebig" }
+      ]
+    },
+    {
+      "number": 15,
+      "tableName": "Andromeda",
+      "guests": [
+        { "name": "Kun Kan" },
+        { "name": "Min Jae Kim" },
+        { "name": "Ryan Tsang" },
+        { "name": "Sophia Kim" },
+        { "name": "Justin Baek" },
+        { "name": "Jenny Wong" }
+      ]
+    },
+    {
+      "number": 16,
+      "tableName": "Perseus",
+      "guests": [
+        { "name": "Rahim Sohani" },
+        { "name": "Kaif Andani" },
+        { "name": "Ambreen Sohani" },
+        { "name": "zidan sohani" },
+        { "name": "Nasim Dhansi" },
+        { "name": "Noorali Dhansi" },
+        { "name": "Shama Dhansi" },
+        { "name": "Abdul Nabi Dhansi" },
+        { "name": "Aamir Andani" },
+        { "name": "Shabnam Andani" }
+      ]
+    },
+    {
+      "number": 17,
+      "tableName": "Hercules",
+      "guests": [
+        { "name": "Mariam Bhojani" },
+        { "name": "Sadrudin Bhojani" },
+        { "name": "Jena Mohamed" },
+        { "name": "Karim Mohamed" },
+        { "name": "Farzeena Mohamed" },
+        { "name": "Rozmin Samnani" },
+        { "name": "Shams Surani" }
+      ]
+    },
+    {
+      "number": 18,
+      "tableName": "Sagittarius",
+      "guests": [
+        { "name": "Shellina Alidina" },
+        { "name": "Karim Alidina" },
+        { "name": "Afzal Bhojani" },
+        { "name": "Zahra Bhojani" },
+        { "name": "Rishma Merchant" },
+        { "name": "Shanif Merchant" }
+      ]
+    },
+    {
+      "number": 19,
+      "tableName": "Scorpius",
+      "guests": [
+        { "name": "Farrah Mohamed" },
+        { "name": "Taslim Mohamed" },
+        { "name": "Anthony Marshall" },
+        { "name": "Arif Kanani" },
+        { "name": "Shebina Kanani" },
+        { "name": "Mahmood Mohamed" },
+        { "name": "Khadija Mohamed" },
+        { "name": "Maleksultan Mohamed" }
+      ]
+    },
+    {
+      "number": 20,
+      "tableName": "Capricornus",
+      "guests": [
+        { "name": "Diamond Abji" },
+        { "name": "Dilshad Abji" },
+        { "name": "Mehboob Abji" },
+        { "name": "Zenobia Jiwani" },
+        { "name": "Salim Jiwani" },
+        { "name": "Shabina Lakhany" }
+      ]
+    },
+    {
+      "number": 21,
+      "tableName": "Draco",
+      "guests": [
+        { "name": "Rozemin Haji" },
+        { "name": "Alnoor Haji" },
+        { "name": "Alnoor Awadia" },
+        { "name": "Nashila Awadia" },
+        { "name": "Aman Juneja" },
+        { "name": "Ken Juneja" },
+        { "name": "Janet Juneja" }
+      ]
+    },
+    {
+      "number": 22,
+      "tableName": "Ursa Major",
+      "guests": [
+        { "name": "Al-Karim Allidina" },
+        { "name": "Naaz Allidina" },
+        { "name": "Fareen Lalji Jamal" },
+        { "name": "Amin Lalji" },
+        { "name": "Jenny Velji Jivraj" },
+        { "name": "Alnoor Jivraj" },
+        { "name": "Shermeen Mecklai" },
+        { "name": "Hussein Mecklai" },
+        { "name": "Sophia Mecklai" },
+        { "name": "Zahra Mecklai" }
+      ]
+    },
+    {
+      "number": 23,
+      "tableName": "Hydra",
+      "guests": [
+        { "name": "Amin Lakhani" },
+        { "name": "Nazira Lakhani" },
+        { "name": "Anisa Lalani" },
+        { "name": "Shabir Lalani" },
+        { "name": "Anaya Lakhani" },
+        { "name": "Vazir Nanji" },
+        { "name": "Shamim Nanji" }
+      ]
+    },
+    {
+      "number": 24,
+      "tableName": "Cepheus",
+      "guests": [
+        { "name": "Jameel Alidina" },
+        { "name": "Kalil Bhojani" },
+        { "name": "Yasira Bhojani" },
+        { "name": "Kaiden Merchant" },
+        { "name": "Aayaan Merchant" },
+        { "name": "Maya Merchant" },
+        { "name": "Aqeel Awadia" },
+        { "name": "Ridah Ratanshi" },
+        { "name": "Nafisa Awadia" }
+      ]
+    },
+    {
+      "number": 25,
+      "tableName": "Crux",
+      "guests": [
+        { "name": "Qaiz Mohamed" },
+        { "name": "Aidan Lalji" },
+        { "name": "Ariana Lalji" },
+        { "name": "Leilah Mohamed" },
+        { "name": "Nevaeh Mohamed" },
+        { "name": "Farees Siddiqui" },
+        { "name": "Farees Guest" },
+        { "name": "Aseera Jivraj" },
+        { "name": "Nafisa Samnani" },
+        { "name": "Nasiha Samnani" }
       ]
     }
   ]
 }
+
