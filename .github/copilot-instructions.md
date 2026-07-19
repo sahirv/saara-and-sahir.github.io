@@ -54,6 +54,7 @@ lists can differ. Schema:
     {
       "number": 1,
       "tableName": "Orion",
+      "image": "https://.../orion.jpg",
       "guests": [
         { "name": "Full Name", "aliases": ["Nickname", "Maiden Name"] }
       ]
@@ -64,6 +65,10 @@ lists can differ. Schema:
 
 - `tableName` is the table's themed display name (e.g. a constellation for the
   Reception or a hike name for the Pithi); it may be an empty string.
+- `image` is an optional per-table background photo. On the Pithi lookup page
+  (`app.js`), finding your table swaps the page background to that table's
+  hike photo (other events ignore it). Prefer Sahir's own photography (`https://sahirvellani.com/images/earth/…`)
+  where a shot matches the hike, falling back to a public Wikimedia image.
 - `aliases` is optional and used only for name matching (not displayed).
 - The JSON is fetched client-side, so **anything in it is publicly visible**.
   Keep it to names + table info only — no addresses, phone numbers, dietary

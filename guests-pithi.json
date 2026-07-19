@@ -3,6 +3,7 @@
     {
       "number": 1,
       "tableName": "Skyline",
+      "image": "./pithi-images/skyline.jpg",
       "guests": [
         { "name": "Farhan Bhanji" },
         { "name": "Simran Bhaidani" },
@@ -16,6 +17,7 @@
     {
       "number": 2,
       "tableName": "Chain Lakes",
+      "image": "./pithi-images/chain-lakes.jpg",
       "guests": [
         { "name": "Nilusha" },
         { "name": "Gigi Pusitz" },
@@ -30,6 +32,7 @@
     {
       "number": 3,
       "tableName": "Maple Pass",
+      "image": "./pithi-images/maple-pass.jpg",
       "guests": [
         { "name": "Kareem Hirani" },
         { "name": "Faizaan Vidhani" },
@@ -43,6 +46,7 @@
     {
       "number": 4,
       "tableName": "Acatenango",
+      "image": "./pithi-images/acatenango.jpg",
       "guests": [
         { "name": "Jamil Rehemtulla" },
         { "name": "Sarah Rehemtulla" },
@@ -57,6 +61,7 @@
     {
       "number": 5,
       "tableName": "Poo Poo Point",
+      "image": "./pithi-images/poo-poo-point.jpg",
       "guests": [
         { "name": "Shermeen Mecklai" },
         { "name": "Hussein Mecklai" },
@@ -69,6 +74,7 @@
     {
       "number": 6,
       "tableName": "South Kaibab",
+      "image": "./pithi-images/south-kaibab.jpg",
       "guests": [
         { "name": "Hannah Kuracina" },
         { "name": "Ryan Schleehahn" },
@@ -81,6 +87,7 @@
     {
       "number": 7,
       "tableName": "Grinnell Glacier",
+      "image": "./pithi-images/grinnell-glacier.jpg",
       "guests": [
         { "name": "Aabida Madhani" },
         { "name": "Saad Madhani" },
@@ -94,6 +101,7 @@
     {
       "number": 8,
       "tableName": "Queen's Garden",
+      "image": "./pithi-images/queen-s-garden.jpg",
       "guests": [
         { "name": "Mohsin Madad Ali" },
         { "name": "Eli Tejani" },
@@ -110,6 +118,7 @@
     {
       "number": 9,
       "tableName": "Grand Wash",
+      "image": "./pithi-images/grand-wash.jpg",
       "guests": [
         { "name": "Ahmed Ali Kamruddin" },
         { "name": "Ashraf Kamruddin" },
@@ -123,6 +132,7 @@
     {
       "number": 10,
       "tableName": "Crater Lake",
+      "image": "./pithi-images/crater-lake.jpg",
       "guests": [
         { "name": "Asif Ali" },
         { "name": "Shirin Vellani" },
@@ -136,6 +146,7 @@
     {
       "number": 11,
       "tableName": "Tahoma",
+      "image": "./pithi-images/tahoma.jpg",
       "guests": [
         { "name": "Rahin Ali" },
         { "name": "Anjiya Ali" },
@@ -148,6 +159,7 @@
     {
       "number": 12,
       "tableName": "Hoh River",
+      "image": "./pithi-images/hoh-river.jpg",
       "guests": [
         { "name": "Hamza Bana" },
         { "name": "Nupur" },
@@ -164,6 +176,7 @@
     {
       "number": 13,
       "tableName": "Sentinel Dome",
+      "image": "./pithi-images/sentinel-dome.jpg",
       "guests": [
         { "name": "Hameeda Somani" },
         { "name": "Nazim Somani" },
@@ -179,6 +192,7 @@
     {
       "number": 14,
       "tableName": "Lake Agnes",
+      "image": "./pithi-images/lake-agnes.jpg",
       "guests": [
         { "name": "Rozina Joosub" },
         { "name": "Firdous Joosub" },
@@ -195,6 +209,7 @@
     {
       "number": 15,
       "tableName": "Milne Dam",
+      "image": "./pithi-images/milne-dam.jpg",
       "guests": [
         { "name": "Aziz Ali" },
         { "name": "Naureen Ali" },
@@ -210,6 +225,7 @@
     {
       "number": 16,
       "tableName": "Meteora",
+      "image": "./pithi-images/meteora.jpg",
       "guests": [
         { "name": "Minazali Punja" },
         { "name": "Zahra Punja" },
@@ -225,6 +241,7 @@
     {
       "number": 17,
       "tableName": "The Enchantments",
+      "image": "./pithi-images/the-enchantments.jpg",
       "guests": [
         { "name": "Salimah Basaria" },
         { "name": "Zynah Basaria" },
@@ -240,6 +257,7 @@
     {
       "number": 18,
       "tableName": "Mount Whitney",
+      "image": "./pithi-images/mount-whitney.jpg",
       "guests": [
         { "name": "Mariam Bhojani" },
         { "name": "Sadrudin Bhojani" },
@@ -253,6 +271,7 @@
     {
       "number": 19,
       "tableName": "Mount St. Helens",
+      "image": "./pithi-images/mount-st-helens.jpg",
       "guests": [
         { "name": "Shellina Alidina" },
         { "name": "Karim Alidina" },
@@ -267,6 +286,7 @@
     {
       "number": 20,
       "tableName": "Hurricane Ridge",
+      "image": "./pithi-images/hurricane-ridge.jpg",
       "guests": [
         { "name": "Diamond Abji" },
         { "name": "Dilshad Abji" },
@@ -282,6 +302,7 @@
     {
       "number": 21,
       "tableName": "Redwoods",
+      "image": "./pithi-images/redwoods.jpg",
       "guests": [
         { "name": "Al-Karim Allidina" },
         { "name": "Naaz Allidina" },
@@ -295,6 +316,7 @@
     {
       "number": 22,
       "tableName": "Wedgemount",
+      "image": "./pithi-images/wedgemount.jpg",
       "guests": [
         { "name": "Amin Lakhani" },
         { "name": "Nazira Lakhani" },
@@ -309,6 +331,7 @@
     {
       "number": 23,
       "tableName": "Mailbox Peak",
+      "image": "./pithi-images/mailbox-peak.jpg",
       "guests": [
         { "name": "Jameel Alidina" },
         { "name": "Kalil Bhojani" },
@@ -321,6 +344,7 @@
     {
       "number": 25,
       "tableName": "Mt. Si",
+      "image": "./pithi-images/mt-si.jpg",
       "guests": [
         { "name": "Qaiz Mohamed" },
         { "name": "Aidan Lalji" },
@@ -336,6 +360,4 @@
     }
   ]
 }
-
-
 

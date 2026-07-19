@@ -46,6 +46,7 @@
       const tableRef = {
         number: table.number,
         tableName: table.tableName,
+        image: table.image,
         guestNames: allGuestNames,
       };
       for (const guest of table.guests || []) {
@@ -135,8 +136,39 @@
     return scored;
   }
 
+  function isPithi() {
+    return !!(window.SNS && window.SNS.event === "pithi");
+  }
+
+  // Swap the page background to the found table's hike photo (Pithi only).
+  // The header/text sit on the solid card, so the photo shows unmodified.
+  // Only `background-*` on a scrolling background is used — no filters, blurs,
+  // or fixed attachment — so nothing forces an expensive repaint.
+  function setHikeBackground(url) {
+    if (!isPithi() || !url) {
+      clearHikeBackground();
+      return;
+    }
+    const body = document.body;
+    body.style.backgroundImage = 'url("' + encodeURI(url) + '")';
+    body.style.backgroundSize = "cover";
+    body.style.backgroundPosition = "center";
+    body.style.backgroundRepeat = "no-repeat";
+    body.classList.add("has-hike-bg");
+  }
+
+  function clearHikeBackground() {
+    const body = document.body;
+    body.style.backgroundImage = "";
+    body.style.backgroundSize = "";
+    body.style.backgroundPosition = "";
+    body.style.backgroundRepeat = "";
+    body.classList.remove("has-hike-bg");
+  }
+
   function renderFound(entry) {
     const { table } = entry;
+    setHikeBackground(table.image);
     resultEl.innerHTML = "";
     const box = document.createElement("div");
     box.className = "found";
@@ -176,6 +208,7 @@
   }
 
   function renderAmbiguous(matches) {
+    clearHikeBackground();
     resultEl.innerHTML = "";
     const box = document.createElement("div");
     box.className = "ambiguous";
@@ -208,6 +241,7 @@
   }
 
   function renderNotFound() {
+    clearHikeBackground();
     var seatingHref = "./seating.html?event=" + (window.SNS && window.SNS.event ? window.SNS.event : "reception");
     resultEl.innerHTML =
       '<div class="not-found">' +
@@ -217,6 +251,7 @@
   }
 
   function renderError() {
+    clearHikeBackground();
     resultEl.innerHTML =
       '<div class="not-found">' +
       "Something went wrong loading the guest list. Please refresh and try again." +
