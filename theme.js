@@ -20,8 +20,10 @@
   "use strict";
 
   var EVENTS = {
-    pithi:     { className: "theme-pithi",     label: "Pithi",     date: "July 24" },
-    reception: { className: "theme-reception", label: "Reception", date: "July 25" }
+    pithi:     { className: "theme-pithi",     label: "Pithi",     date: "July 24",
+                 clue: "Every table\u2019s a trailhead. One trail hides a word worth more than a seat." },
+    reception: { className: "theme-reception", label: "Reception", date: "July 25",
+                 clue: "The stars keep an interstellar secret." }
   };
 
   // Wedding dates (local time). Update if the schedule changes.
@@ -75,9 +77,15 @@
     }
   }
 
+  function updateClue(name) {
+    var clueEl = document.getElementById("event-clue");
+    if (clueEl) clueEl.textContent = EVENTS[name].clue;
+  }
+
   var chosen = eventFromQuery() || eventFromDate(new Date()) || "pithi";
   applyTheme(chosen);
   updateHeader(chosen);
+  updateClue(chosen);
   propagateEventOnLinks(chosen);
 
   // Rewrite in-site navigation so the chosen event follows the guest across

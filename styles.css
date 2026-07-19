@@ -251,6 +251,20 @@ footer {
   color: var(--ink-dim);
 }
 
+/* Scavenger-hunt breadcrumb: deliberately faint so most guests skim past it,
+   but legible to anyone who looks. Hidden when empty so it adds no gap. */
+footer .clue {
+  margin-top: 0.75rem;
+  font-size: 0.78rem;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  opacity: 0.55;
+}
+
+footer .clue:empty {
+  display: none;
+}
+
 /* --------------------------------------------------------------
    Seating plan grid
    -------------------------------------------------------------- */

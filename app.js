@@ -331,4 +331,53 @@
       renderAmbiguous(matches.slice(0, 5));
     }
   });
+
+  // Subtle hint that a secret game exists: gently rotate the search-box
+  // placeholder between real examples and a teaser. Pauses whenever the guest
+  // is focused or typing so it never fights their input. Honors reduced-motion
+  // by showing a single static teaser instead of cycling.
+  (function initPlaceholderHint() {
+    const messages = [
+      "e.g. Jane Doe",
+      "psst\u2026 some words unlock more than a seat",
+      "e.g. your full name",
+      "there\u2019s a hidden word to find\u2026",
+    ];
+    const base = messages[0];
+    let i = 0;
+    let timer = null;
+
+    const reduce =
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) {
+      input.placeholder = messages[1];
+      return;
+    }
+
+    function tick() {
+      i = (i + 1) % messages.length;
+      input.placeholder = messages[i];
+    }
+    function start() {
+      if (timer || document.activeElement === input || input.value) return;
+      timer = setInterval(tick, 3500);
+    }
+    function stop() {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    input.addEventListener("focus", stop);
+    input.addEventListener("blur", function () {
+      if (!input.value) {
+        i = 0;
+        input.placeholder = base;
+        start();
+      }
+    });
+    start();
+  })();
 })();
