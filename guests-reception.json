@@ -359,6 +359,14 @@
         { "name": "Nafisa Samnani" },
         { "name": "Nasiha Samnani" }
       ]
+    },
+    {
+      "number": 26,
+      "tableName": "Eridanus",
+      "guests": [
+        { "name": "Sahir Vellani" },
+        { "name": "Saara Mohamed" }
+      ]
     }
   ]
 }

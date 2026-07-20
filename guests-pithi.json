@@ -63,12 +63,8 @@
       "tableName": "Poo Poo Point",
       "image": "./pithi-images/poo-poo-point.jpg",
       "guests": [
-        { "name": "Shermeen Mecklai" },
-        { "name": "Hussein Mecklai" },
-        { "name": "Sophia Mecklai" },
-        { "name": "Zahra Mecklai" },
-        { "name": "Rashida Tejani" },
-        { "name": "Karim Tejani" }
+        { "name": "Sahir Vellani" },
+        { "name": "Saara Mohamed"}
       ]
     },
     {
@@ -95,7 +91,9 @@
         { "name": "Nadia Dharsee" },
         { "name": "Zahir Dharsee" },
         { "name": "Shaz Mawji" },
-        { "name": "Nick Mawji" }
+        { "name": "Nick Mawji" },
+        { "name": "Rashida Tejani" },
+        { "name": "Karim Tejani" }
       ]
     },
     {
@@ -110,7 +108,6 @@
         { "name": "Parvin Amyn" },
         { "name": "Mandy Malik" },
         { "name": "Amyn Khowaja" },
-        { "name": "Arisha Khowaja" },
         { "name": "Mehreen Tejani" },
         { "name": "Ariya Tejani" }
       ]
@@ -154,7 +151,9 @@
         { "name": "Ashhal Vellani" },
         { "name": "Iman Vellani" },
         { "name": "Arisha Khowaja" },
-        { "name": "Sara Lakhani"}
+        { "name": "Sara Lakhani"},
+        { "name": "Sophia Mecklai" },
+        { "name": "Zahra Mecklai" }
       ]
     },
     {
@@ -311,7 +310,9 @@
         { "name": "Fareen Lalji Jamal" },
         { "name": "Amin Lalji" },
         { "name": "Jenny Velji Jivraj" },
-        { "name": "Alnoor Jivraj" }
+        { "name": "Alnoor Jivraj" },
+        { "name": "Shermeen Mecklai" },
+        { "name": "Hussein Mecklai" }
       ]
     },
     {
