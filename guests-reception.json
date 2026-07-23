@@ -87,6 +87,7 @@
       "guests": [
         { "name": "Mohsin Madad Ali" },
         { "name": "Eli Tejani" },
+        { "name": "Kiran Alwani" },
         { "name": "Malik Madad Ali" },
         { "name": "Parvin Amyn" },
         { "name": "Mandy Malik" },
@@ -105,33 +106,11 @@
         { "name": "Ashraf Kamruddin" },
         { "name": "Kassam Ali Rajwani" },
         { "name": "Daulat Rajwani" },
+        { "name": "Yasmin Alwani" },
+        { "name": "Roshan Alwani" },
         { "name": "Umma Aunty" },
         { "name": "Mehboob Rajwani" },
         { "name": "Saima Rajwani" }
-      ]
-    },
-    {
-      "number": 10,
-      "tableName": "Pisces",
-      "guests": [
-        { "name": "Shirin Vellani" },
-        { "name": "Yasmin Alwani" },
-        { "name": "Roshan Alwani" },        
-        { "name": "DADA Vellani" },
-        { "name": "Amir Vellani" },
-        { "name": "Iman Vellani" }
-      ]
-    },
-    {
-      "number": 26,
-      "tableName": "Eridanus",
-      "guests": [
-        { "name": "Razia Ali" },
-        { "name": "Rahin Ali" },
-        { "name": "Anjiya Ali" },
-        { "name": "Mishal Vellani" },
-        { "name": "Sara Lakhani" },
-        { "name": "Asif Ali" }
       ]
     },
     {
@@ -150,6 +129,23 @@
         { "name": "Ramal Morani" }
       ]
     },
+    {
+      "number": 10,
+      "tableName": "Pisces",
+      "guests": [
+        { "name": "Asif Ali" },
+        { "name": "Shirin Vellani" },
+        { "name": "Razia Ali" },
+        { "name": "Rahin Ali" },
+        { "name": "Anjiya Ali" },
+        { "name": "Mishal Vellani" },
+        { "name": "Sara Lakhani" },
+        { "name": "DADA Vellani" },
+        { "name": "Amir Vellani" },
+        { "name": "Iman Vellani" }
+      ]
+    },
+
     {
       "number": 11,
       "tableName": "Bootes",
@@ -362,6 +358,14 @@
         { "name": "Aseera Jivraj" },
         { "name": "Nafisa Samnani" },
         { "name": "Nasiha Samnani" }
+      ]
+    },
+    {
+      "number": 26,
+      "tableName": "Eridanus",
+      "guests": [
+        { "name": "Sahir Vellani" },
+        { "name": "Saara Mohamed" }
       ]
     }
   ]
