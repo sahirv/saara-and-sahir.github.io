@@ -28,14 +28,15 @@
       "number": 3,
       "tableName": "Orion",
       "guests": [
-        { "name": "Kareem Hirani" },
         { "name": "Faizaan Vidhani" },
         { "name": "Asim Maredia" },
         { "name": "Muneef Momin" },
         { "name": "Anusha Sunasara" },
         { "name": "Celina Fu" },
         { "name": "Celina Fu's Guest" },
-        { "name": "Raval Alviarez" }
+        { "name": "Raval Alviarez" },
+        { "name": "Samira Kamruddin" },
+        { "name": "Lian Kamruddin" }
       ]
     },
     {
