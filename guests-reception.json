@@ -206,9 +206,7 @@
         { "name": "Holly-Ann Campbell" },
         { "name": "Braden Campbell" },
         { "name": "Leanne Tran" },
-        { "name": "Rashida Tejani" },
-        { "name": "Karim Tejani" }
-
+        { "name": "Klaus Fiebig" }
       ]
     },
     {
@@ -220,7 +218,9 @@
         { "name": "Ryan Tsang" },
         { "name": "Sophia Kim" },
         { "name": "Justin Baek" },
-        { "name": "Jenny Wong" }
+        { "name": "Jenny Wong" },
+        { "name": "Rashida Tejani" },
+        { "name": "Karim Tejani" }
       ]
     },
     {
@@ -287,7 +287,8 @@
         { "name": "Mehboob Abji" },
         { "name": "Zenobia Jiwani" },
         { "name": "Salim Jiwani" },
-        { "name": "Shabina Lakhany" }
+        { "name": "Shabina Lakhany" },
+        { "name": "Farida Dhanji"}
       ]
     },
     {
@@ -313,7 +314,7 @@
         { "name": "Amin Lalji" },
         { "name": "Jenny Velji Jivraj" },
         { "name": "Alnoor Jivraj" },
-        { "name": "Shermeen Mecklai" },
+        { "name": "Sharmeen Mecklai" },
         { "name": "Hussein Mecklai" },
         { "name": "Sophia Mecklai" },
         { "name": "Zahra Mecklai" }
@@ -325,7 +326,7 @@
       "guests": [
         { "name": "Amin Lakhani" },
         { "name": "Nazira Lakhani" },
-        { "name": "Anisa Lalani" },
+        { "name": "Anisa Lakhani" },
         { "name": "Shabir Lalani" },
         { "name": "Anaya Lakhani" },
         { "name": "Vazir Nanji" },
